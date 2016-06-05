@@ -1,0 +1,18 @@
+module PWM_tb();
+
+	reg clock, reset;
+	wire pwm;
+	
+initial
+begin
+	clock=1;
+	reset=1;
+	#2 reset=0;
+	#300000 $finish;
+end
+	
+always #100 clock=~clock;
+
+PWM module1 (clock, reset, pwm);
+
+endmodule

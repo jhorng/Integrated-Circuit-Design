@@ -1,0 +1,60 @@
+module PWM (
+	input clock, reset,
+	output reg pwm
+);
+
+	integer counter;
+	
+	
+	always@(posedge clock, posedge reset)
+	begin
+		if (reset)
+		begin
+			counter<=0;
+//			pwm<=0;
+		end
+		else
+		begin
+			if (counter < 25000000)
+				counter<=counter+1;
+			else
+			begin
+				pwm<=~pwm;
+				counter<=0;
+			end
+		end
+	end
+	
+	
+	
+//	always@(posedge clock, posedge reset)
+//	begin
+//		if (reset)
+//		begin
+//			pwm <= 0;
+//			counter <= 0;
+//		end
+//		else
+//		begin
+//			if (counter < 20000)
+//			begin
+//				pwm <= 1;
+//				counter <= counter + 1;
+//			end
+//			else
+//			begin
+//				if (counter < 200000)
+//				begin
+//					pwm <= 0;
+//					counter <= counter + 1;
+//				end
+//				else
+//				begin
+////					pwm <= 0;
+//					counter <= 0;
+//				end
+//			end
+//		end
+//	end
+	
+endmodule
