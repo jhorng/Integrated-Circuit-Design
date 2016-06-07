@@ -1,6 +1,6 @@
 ## Generated SDC file "PWM.out.sdc"
 
-## Copyright (C) 1991-2013 Altera Corporation
+## Copyright (C) 1991-2009 Altera Corporation
 ## Your use of Altera Corporation's design tools, logic functions 
 ## and other software and tools, and its AMPP partner logic 
 ## functions, and any output files from any of the foregoing 
@@ -17,9 +17,9 @@
 
 ## VENDOR  "Altera"
 ## PROGRAM "Quartus II"
-## VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+## VERSION "Version 9.1 Build 222 10/21/2009 SJ Web Edition"
 
-## DATE    "Tue Jun 07 00:15:29 2016"
+## DATE    "Tue Jun 07 15:25:21 2016"
 
 ##
 ## DEVICE  "EP2C20F484C7"
@@ -38,7 +38,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clock} -period 4.600 -waveform { 0.000 2.300 } [get_ports {clock}]
+create_clock -name {clock} -period 2.900 -waveform { 0.000 1.450 } [get_ports {clock}]
 
 
 #**************************************************************
