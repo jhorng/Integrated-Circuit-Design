@@ -1,12 +1,15 @@
-module PWM (
-	input clock, reset, enable,
-	output reg pwm,
-	output reg [4:0]counter
-);
+module PWM (clock, reset, enable, pwm, counter);
+	
+	input clock, reset, enable;
+	output pwm;
+	output [4:0]counter;
+	
+	reg pwm;
+	reg [4:0]counter;
 
 //	reg [31:0]counter;
 	
-	always@(posedge clock, posedge reset)
+	always@(posedge clock or posedge reset)
 	begin
 		if (reset)
 		begin

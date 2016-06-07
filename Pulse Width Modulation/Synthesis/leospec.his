@@ -1,0 +1,92 @@
+#
+#
+# 
+# 06/07/16 16:04:20
+set_working_dir C:/Users/Student/Desktop/PWM
+set_working_dir "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/Synthesis"
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+### Previous Command Failed
+
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+read  { "C:/Users/Student/Desktop/Integrated-Circuit-Design/Pulse Width Modulation/PWM.v" }
+pre_optimize -common_logic -unused_logic -boundary -xor_comparator_optimize 
+pre_optimize -extract 
+set_attribute .work.PWM.INTERFACE.reset -name INPUT_MAX_LOAD -value "0.1" -port
+set_attribute .work.PWM.INTERFACE.reset -name ARRIVAL_TIME -value "18" -port
+set_attribute .work.PWM.INTERFACE.reset -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.reset -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name MAX_TRANS_FALL -value "0.5" -port
+optimize .work.PWM.INTERFACE -target gdk_typ -macro -delay -effort quick -hierarchy auto 
+optimize_timing .work.PWM.INTERFACE 
+view_schematic -view
+report_area -cell_usage -all_leafs 
+report_delay  -num_paths 1 -critical_paths -clock_frequency
+set novendor_constraint_file FALSE
+auto_write -format Verilog PWM_0_netlist.v
+set_attribute .work.PWM.INTERFACE.counter(2) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(2) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(0) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.reset -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.reset -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.reset -name ARRIVAL_TIME -value "18" -port
+set_attribute .work.PWM.INTERFACE.reset -name INPUT_MAX_LOAD -value "0.1" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(3) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(1) -name OUTPUT_LOAD -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name MAX_TRANS_FALL -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name MAX_TRANS_RISE -value "0.5" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name REQUIRED_TIME -value "2.3" -port
+set_attribute .work.PWM.INTERFACE.counter(4) -name OUTPUT_LOAD -value "0.5" -port
+view_schematic -view
